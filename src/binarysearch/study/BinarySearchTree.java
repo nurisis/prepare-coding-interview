@@ -1,3 +1,5 @@
+package binarysearch.study;
+
 class Node{
     Node left;
     int data;
