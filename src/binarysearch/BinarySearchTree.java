@@ -1,3 +1,5 @@
+package binarysearch;
+
 class Node{
     Node left;
     int data;
