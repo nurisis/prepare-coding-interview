@@ -25,14 +25,20 @@ fun main() {
     println("get(10): ${linkedList.get(10)}, size: ${linkedList.size}")
     println("front(): ${linkedList.front()}, size: ${linkedList.size}")
     println("back(): ${linkedList.back()}, size: ${linkedList.size}")
-    println("isEmpty(): ${ linkedList.isEmpty()}, size: ${linkedList.size}")
+    println("isEmpty(): ${ linkedList.isEmpty()}, $linkedList, size: ${linkedList.size}")
+
+    println("After remove(1) : ${linkedList.remove(1)}, $linkedList, size: ${linkedList.size}")
+    println("After remove(0) : ${linkedList.remove(0)}, $linkedList, size: ${linkedList.size}")
+    println("After remove(2) : ${linkedList.remove(2)}, $linkedList, size: ${linkedList.size}")
+    println("After insert(0, 0) : ${linkedList.insert(0, 0)}, $linkedList, size: ${linkedList.size}")
+    println("After insert(2, 6) : ${linkedList.insert(2, 6)}, $linkedList, size: ${linkedList.size}")
+    println("After insert(4, 7) : ${linkedList.insert(4, 7)}, $linkedList, size: ${linkedList.size}")
 
     linkedList.popBack()
     linkedList.popBack()
     linkedList.popBack()
     linkedList.popBack()
     linkedList.popBack()
-    linkedList.popBack()
 
-    println("After popBack 6 times, isEmpty(): ${linkedList.isEmpty()}, $linkedList")
+    println("After popBack 5 times, isEmpty(): ${linkedList.isEmpty()}, $linkedList")
 }

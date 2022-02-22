@@ -84,6 +84,37 @@ class MyLinkedList<T> constructor(
         return get(size - 1)
     }
 
+    fun insert(index: Int, element: T) {
+        if (index > size || index < 0) return
+
+        val newNode = Node(element)
+        val oldNodeLeft = getNode(index - 1)
+        val oldNodeRight = getNode(index)
+
+        if (oldNodeLeft == null) {
+            head = newNode
+        } else {
+            oldNodeLeft.next = newNode
+        }
+
+        newNode?.next = oldNodeRight
+        size++
+    }
+
+    fun remove(index: Int) {
+        val nodeToRemove: Node<T>? = getNode(index) ?: return
+
+        val nodeToRemoveLeft = getNode(index - 1)
+
+        if (nodeToRemoveLeft == null) {
+            head = nodeToRemove?.next
+        } else {
+            nodeToRemoveLeft.next = nodeToRemove?.next
+        }
+
+        size--
+    }
+
     override fun toString(): String {
         var string = "["
 
