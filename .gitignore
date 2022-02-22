@@ -1,6 +1,7 @@
 out/*
 *.iml
 .idea/*
+lib/*
 
 # IntelliJ IDEA project configurations
 .idea/
