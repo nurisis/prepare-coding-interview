@@ -49,7 +49,7 @@ fun findString(string: String, pattern: String): IntArray {
 }
 
 /**
- * hash(s) = d*(s[0]^(lengthOfPattern-1)) + d*(s[1]^(lengthOfPattern-2)) + ... + d*(s[n-1]^(lengthOfPattern-n-2))
+ * hash(s) = s[0]*(d^(lengthOfPattern-1)) + s[1]*(d^(lengthOfPattern-2)) + ... + s[n-1]*(d^(lengthOfPattern-n-2))
  * Here, d == [WHATEVER_NUMBER_YOU_WANT], so just number you want.
  */
 private fun hash(s: String, lengthOfPattern: Int): Int {
