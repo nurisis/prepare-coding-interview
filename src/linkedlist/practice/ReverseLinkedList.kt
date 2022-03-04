@@ -1,5 +1,66 @@
 package linkedlist.practice
 
+import java.util.*
+
+fun main() {
+    val node = ListNode(1)
+    node.next = ListNode(2)
+    node.next!!.next = ListNode(2)
+    node.next!!.next!!.next = ListNode(1)
+
+    println("isPalindrome: ${isPalindrome2(node)}")
+}
+
+fun isPalindrome2(head: ListNode?): Boolean {
+    val list = mutableListOf<Int>()
+
+    val map = TreeMap<Int, Int>()
+    map.forEach {  }
+
+    var temp = head
+    while (temp != null) {
+        list.add(temp.`val`)
+        temp = temp.next
+    }
+
+    val size = list.size
+    for (i in 0 until size/2) {
+        if (list[i] != list[size - i - 1]) return false
+    }
+
+    return true
+}
+
+val stack = LinkedList<Int>()
+
+fun isPalindrome(head: ListNode?): Boolean {
+    val reverseNode = reverse(head)
+    var temp = reverseNode
+
+    while (temp != null) {
+        if (temp?.`val` != stack.pop().also { println("val: ${temp?.`val`}, pop:$it") }) return false
+        temp = temp?.next
+    }
+
+    return true
+}
+
+private fun reverse(head: ListNode?): ListNode? {
+    println("head >> ${head?.`val`}")
+    if (head != null) {
+        stack.add(head.`val`)
+    }
+    if(head?.next == null) {
+        return head
+    }
+
+    val node = reverse(head?.next)
+    head.next!!.next = head
+    head.next = null
+    println("after >> stack : $stack / node: $node")
+    return node
+}
+
 /**
  * Problem: Given the head of a singly linked list, reverse the list, and return the reversed list.
  *
