@@ -24,6 +24,10 @@ class DynamicArray<T> {
 
     fun isEmpty(): Boolean = size == 0
 
+    operator fun set(index: Int, value: T) {
+        array[index] = value
+    }
+
     operator fun get(index: Int): T {
         return if (index < size) {
             array[index] as T
