@@ -25,4 +25,12 @@ fun main() {
     println("Extract max: ${maxHeap.extractMax()} (size:${maxHeap.size}, max:${maxHeap.getMax()}, isEmpty:${maxHeap.isEmpty()}) => $maxHeap")
     println("Extract max: ${maxHeap.extractMax()} (size:${maxHeap.size}, max:${maxHeap.getMax()}, isEmpty:${maxHeap.isEmpty()}) => $maxHeap")
     println("Extract max: ${maxHeap.extractMax()} (size:${maxHeap.size}, max:${maxHeap.getMax()}, isEmpty:${maxHeap.isEmpty()}) => $maxHeap")
+
+    // Heapify
+    val array = arrayOf(1,2,3,4,5,6,7,8,9)
+    println("Before heapify: ${array.toList()}")
+    // Build heap (rearrange array)
+    for (i in array.size / 2 - 1 downTo 0)
+        MaxHeap.heapify(array, i)
+    println("After heapify: ${array.toList()}")
 }
