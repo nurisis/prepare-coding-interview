@@ -1,4 +1,4 @@
-package heap
+package tree.heap
 
 
 fun main() {
@@ -29,7 +29,7 @@ fun main() {
     // Heapify
     val array = arrayOf(1,2,3,4,5,6,7,8,9)
     println("Before heapify: ${array.toList()}")
-    // Build heap (rearrange array)
+    // Build tree.heap (rearrange array)
     for (i in array.size / 2 - 1 downTo 0)
         MaxHeap.heapify(array, i)
     println("After heapify: ${array.toList()}")

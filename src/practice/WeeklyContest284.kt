@@ -1,6 +1,5 @@
 package practice
 
-import heap.MaxHeap
 import java.util.*
 
 fun main() {
@@ -9,7 +8,7 @@ fun main() {
     heap.offer(2)
     heap.offer(3)
     println(heap.poll())
-    println("heap: $heap")
+    println("tree.heap: $heap")
 }
 
 fun maximumTop(nums: IntArray, k: Int): Int {

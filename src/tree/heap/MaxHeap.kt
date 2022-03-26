@@ -1,7 +1,6 @@
-package heap
+package tree.heap
 
 import array.DynamicArray
-import kotlin.math.max
 
 class MaxHeap {
     private val array = DynamicArray<Int>()
