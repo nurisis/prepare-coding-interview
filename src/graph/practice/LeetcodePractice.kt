@@ -1,4 +1,4 @@
-package graph
+package graph.practice
 
 import java.util.*
 
