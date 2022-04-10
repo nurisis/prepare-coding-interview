@@ -8,7 +8,6 @@ package practice
 fun main() {
     val loserMap = hashMapOf<Int, Int>()
 
-
     val answer1 = loserMap.filter { it.value == 0 }.map { it.key }
     val answer2 = loserMap.filter { it.value == 1 }.map { it.key }
     answer1.sorted()
@@ -21,8 +20,11 @@ fun main() {
     }
     val builder = StringBuilder()
     builder.append("")
-
+    var s = ""
     val keys = CharArray(3)
+
+    val i = "".substring(1)
+    val wordSet = hashSetOf<String>(*listOf("").toTypedArray())
 }
 
 class Encrypter(keys: CharArray, values: Array<String>, dictionary: Array<String>) {
