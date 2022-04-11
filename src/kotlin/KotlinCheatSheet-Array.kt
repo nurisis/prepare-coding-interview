@@ -38,7 +38,7 @@ fun array() {
     array.shuffle()
     val copyToArray: Array<Int> = array.copyOf()
     val copyToArrayWithNewSize: Array<Int?> = array.copyOf(10)
-    val copyOfRange: Array<Int> = array.copyOfRange(3,5)
+    val copyOfRange: Array<Int> = array.copyOfRange(1, 2)
 
     /**
      * Sorting
