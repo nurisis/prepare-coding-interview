@@ -1,3 +1,4 @@
+import java.lang.StringBuilder
 
 fun main() {
     string()
@@ -35,5 +36,18 @@ fun string() {
     val trimmed = string.trim()
     string.trimEnd()
     string.trimStart()
+
+    /**
+     * StringBuilder
+     */
+    var sub = StringBuilder()
+    sub.append('a')
+    sub.append(1)
+
+    /**
+     * Comparison
+     */
+    // 문자열 비교에서는 24가 더 큼.
+    val shouldTrue = "123" < "24"
 }
 

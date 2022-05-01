@@ -16,6 +16,9 @@ fun array() {
     val array2 = intArrayOf(1, 2, 3, 4)
     val array3 = IntArray(3) { 0 }
 
+    val copied = array.copyOf()
+    val copiedRange = array.copyOfRange(1, 3)
+
     /**
      * Converter
      */
@@ -24,6 +27,7 @@ fun array() {
     val toMutableSet = array.toMutableSet()
     val toSet = array.toSet()
     val toHashSet = array.toHashSet()
+    val toString = array.joinToString(separator = "")
 
     /**
      * Transformer
