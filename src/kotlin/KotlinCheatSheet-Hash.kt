@@ -1,4 +1,3 @@
-package kotlin
 
 fun main() {
     hashMap()

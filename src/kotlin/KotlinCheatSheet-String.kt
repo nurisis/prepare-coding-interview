@@ -56,10 +56,14 @@ fun string() {
     /**
      * StringBuilder
      */
-    var sub = StringBuilder()
-    sub.append('a')
-    sub.append(1)
-    sub.deleteCharAt(0)
+    var stringBuilder = StringBuilder()
+    stringBuilder.append('a')
+    stringBuilder.append(1)
+    // delete => removeRange 는 builder 내 string 자체를 remove 하는게 아님.
+    stringBuilder.deleteCharAt(0)
+    stringBuilder.delete(0,3)
+    // insert => append(text, start, end) 는 builder 내 string 자체를 insert 하는게 아님.
+    stringBuilder.insert(2, "abc")
 
     /**
      * Comparison
